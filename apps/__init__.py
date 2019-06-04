@@ -1,6 +1,6 @@
 __author__ = 'Ran'
 
-from config import config
+from apps.config import config
 from flask import Flask  # flask
 from flask_sqlalchemy import SQLAlchemy  # sql
 

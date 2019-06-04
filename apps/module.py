@@ -26,10 +26,23 @@ class Userdata(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     openid = db.Column(db.String(255))  # openid
+    username = db.Column(db.String(255))  # username
+    avatar = db.Column(db.String(255))  # avatarUrl
+    gender = db.Column(db.String(255))  # gender
+
+    country = db.Column(db.String(255))  # country
+    province = db.Column(db.String(255))  # province
+    city = db.Column(db.String(255))  # city
 
     # 定义对象
-    def __init__(self, openid=None):
+    def __init__(self, openid=None, username=None, avatar=None, gender=None, country=None, province=None, city=None):
         self.openid = openid
+        self.username = username
+        self.avatar = avatar
+        self.gender = gender
+        self.country = country
+        self.province = province
+        self.city = city
         self.update()  # 提交数据
 
     # 提交数据函数
